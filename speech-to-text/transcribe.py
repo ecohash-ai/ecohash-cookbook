@@ -13,6 +13,12 @@ client = OpenAI(
 audio_path = sys.argv[1] if len(sys.argv) > 1 else "audio.wav"
 
 with open(audio_path, "rb") as audio_file:
-    result = client.audio.transcriptions.create(model="whisper-large-v3", file=audio_file)
+    result = client.audio.transcriptions.create(
+        model="whisper-large-v3",
+        file=audio_file,
+        # response_format: "json" (default) | "text" | "srt" | "vtt" | "verbose_json" (segment timestamps)
+        # language="en",           # skip language auto-detect for a known language
+        # prompt="Domain terms.",  # bias transcription toward specific vocabulary
+    )
 
 print(result.text)

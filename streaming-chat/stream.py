@@ -13,6 +13,8 @@ stream = client.chat.completions.create(
     model="llama-3.1-8b-instruct",
     messages=[{"role": "user", "content": "Write a haiku about open source."}],
     stream=True,
+    # temperature=0.7,   # 0–2
+    # max_tokens=256,
 )
 
 for chunk in stream:

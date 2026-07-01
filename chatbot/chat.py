@@ -20,6 +20,8 @@ while True:
     reply = client.chat.completions.create(
         model="llama-3.1-8b-instruct",
         messages=messages,
+        # temperature=0.7,   # 0–2
+        # max_tokens=512,
     ).choices[0].message.content
     print("bot>", reply)
     messages.append({"role": "assistant", "content": reply})

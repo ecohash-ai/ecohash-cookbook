@@ -11,9 +11,10 @@ client = OpenAI(
 
 with client.audio.speech.with_streaming_response.create(
     model="kokoro-82m",
-    voice="af_heart",
+    voice="af_heart",           # other voices available — see docs
     input="Hello from EcoHash.",
-    response_format="wav",
+    response_format="wav",      # also: "mp3", "opus"
+    speed=1.0,                  # 0.5–2.0
 ) as response:
     response.stream_to_file("speech.wav")
 

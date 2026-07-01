@@ -13,8 +13,9 @@ client = OpenAI(
 response = client.images.generate(
     model="z-image-turbo",
     prompt="a watercolor painting of a fox in a misty forest",
-    size="1024x1024",
-    response_format="b64_json",
+    size="1024x1024",            # also: 512x512, 768x768, 1024x768, 768x1024
+    response_format="b64_json",  # or "url" (24-hour link)
+    # seed=42,                   # deterministic output
 )
 
 with open("image.png", "wb") as f:

@@ -12,6 +12,12 @@
 
 A collection of runnable example apps built on EcoHash — an OpenAI-compatible inference API for open models (chat, vision, speech, embeddings, images).
 
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
+  <img src="https://img.shields.io/badge/OpenAI-compatible-6D28D9" alt="OpenAI-compatible">
+  <img src="https://img.shields.io/badge/examples-10-lightgrey" alt="10 examples">
+</p>
+
 ## New to EcoHash?
 
 Create an API key at [console.ecohash.com](https://console.ecohash.com?utm_source=github) and read the [docs](https://docs.ecohash.com). Every example points the OpenAI SDK at EcoHash:
